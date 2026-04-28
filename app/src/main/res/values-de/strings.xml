@@ -1,0 +1,23 @@
+﻿<resources>
+    <string name="app_name">MergePDF</string>
+    <string name="home_select_pdf_title">PDFs auswahlen</string>
+    <string name="home_select_pdf_description">Tippe hier, um zwei oder mehr PDF-Dokumente auszuwahlen und zu einer Datei zusammenzufugen.</string>
+    <string name="screen_merge_title">PDFs zusammenfugen</string>
+    <string name="merge_selected_counter">%1$d von %2$d PDFs werden zusammengefugt</string>
+    <string name="add_pdf_button">PDF hinzufugen</string>
+    <string name="remove_pdf_label">Entfernen</string>
+    <string name="merge_pdf_button">PDF ZUSAMMENFUGEN</string>
+    <string name="content_description_back">Back</string>
+    <string name="content_description_home">Home</string>
+    <string name="pdf_pages_count">Pages: %1$d</string>
+    <string name="share_pdf_chooser_title">Send PDF</string>
+    <string name="view_pdf_chooser_title">View PDF</string>
+    <string name="screen_results_title">PDF erstellt</string>
+    <string name="no_pdfs_created">Kein PDF erstellt</string>
+    <string name="output_file_details">%1$d KB | %2$d Page(s)</string>
+    <string name="share_button">Share</string>
+    <string name="view_button">View</string>
+    <string name="error_invalid_merge_selection">Wahle mindestens zwei PDFs zum Zusammenfugen aus.</string>
+    <string name="error_generic_pdf_processing">Beim Verarbeiten der PDF ist ein Fehler aufgetreten.</string>
+    <string name="message_pdf_saved">%1$s in Documents/MergePDF gespeichert</string>
+</resources>

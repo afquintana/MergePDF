@@ -1,0 +1,23 @@
+﻿<resources>
+    <string name="app_name">MergePDF</string>
+    <string name="home_select_pdf_title">PDFを選択</string>
+    <string name="home_select_pdf_description">ここをタップして2つ以上のPDFを選択し、1つのファイルに結合します。</string>
+    <string name="screen_merge_title">PDFを結合</string>
+    <string name="merge_selected_counter">%2$d件中%1$d件のPDFを結合します</string>
+    <string name="add_pdf_button">PDFを追加</string>
+    <string name="remove_pdf_label">削除</string>
+    <string name="merge_pdf_button">PDFを結合</string>
+    <string name="content_description_back">Back</string>
+    <string name="content_description_home">Home</string>
+    <string name="pdf_pages_count">Pages: %1$d</string>
+    <string name="share_pdf_chooser_title">Send PDF</string>
+    <string name="view_pdf_chooser_title">View PDF</string>
+    <string name="screen_results_title">PDFを作成しました</string>
+    <string name="no_pdfs_created">PDFは作成されませんでした</string>
+    <string name="output_file_details">%1$d KB | %2$d Page(s)</string>
+    <string name="share_button">Share</string>
+    <string name="view_button">View</string>
+    <string name="error_invalid_merge_selection">結合するPDFを2つ以上選択してください。</string>
+    <string name="error_generic_pdf_processing">PDFの処理中に問題が発生しました。</string>
+    <string name="message_pdf_saved">%1$sをDocuments/MergePDFに保存しました</string>
+</resources>

@@ -1,0 +1,23 @@
+﻿<resources>
+    <string name="app_name">MergePDF</string>
+    <string name="home_select_pdf_title">Seleccionar PDFs</string>
+    <string name="home_select_pdf_description">Toca aqui para seleccionar dos o mas documentos PDF y unirlos en un solo archivo.</string>
+    <string name="screen_merge_title">Unir PDFs</string>
+    <string name="merge_selected_counter">Se uniran %1$d de %2$d PDFs</string>
+    <string name="add_pdf_button">Anadir PDF</string>
+    <string name="remove_pdf_label">Eliminar</string>
+    <string name="merge_pdf_button">UNIR PDF</string>
+    <string name="content_description_back">Back</string>
+    <string name="content_description_home">Home</string>
+    <string name="pdf_pages_count">Pages: %1$d</string>
+    <string name="share_pdf_chooser_title">Send PDF</string>
+    <string name="view_pdf_chooser_title">View PDF</string>
+    <string name="screen_results_title">PDF creado</string>
+    <string name="no_pdfs_created">No se creo ningun PDF</string>
+    <string name="output_file_details">%1$d KB | %2$d Page(s)</string>
+    <string name="share_button">Share</string>
+    <string name="view_button">View</string>
+    <string name="error_invalid_merge_selection">Selecciona al menos dos PDFs para unir.</string>
+    <string name="error_generic_pdf_processing">Algo salio mal al procesar el PDF.</string>
+    <string name="message_pdf_saved">%1$s guardado en Documents/MergePDF</string>
+</resources>

@@ -1,0 +1,23 @@
+﻿<resources>
+    <string name="app_name">MergePDF</string>
+    <string name="home_select_pdf_title">PDF 선택</string>
+    <string name="home_select_pdf_description">여기를 눌러 두 개 이상의 PDF 문서를 선택하고 하나의 파일로 병합하세요.</string>
+    <string name="screen_merge_title">PDF 병합</string>
+    <string name="merge_selected_counter">%2$d개 중 %1$d개 PDF가 병합됩니다</string>
+    <string name="add_pdf_button">PDF 추가</string>
+    <string name="remove_pdf_label">제거</string>
+    <string name="merge_pdf_button">PDF 병합</string>
+    <string name="content_description_back">Back</string>
+    <string name="content_description_home">Home</string>
+    <string name="pdf_pages_count">Pages: %1$d</string>
+    <string name="share_pdf_chooser_title">Send PDF</string>
+    <string name="view_pdf_chooser_title">View PDF</string>
+    <string name="screen_results_title">PDF 생성됨</string>
+    <string name="no_pdfs_created">생성된 PDF 없음</string>
+    <string name="output_file_details">%1$d KB | %2$d Page(s)</string>
+    <string name="share_button">Share</string>
+    <string name="view_button">View</string>
+    <string name="error_invalid_merge_selection">병합할 PDF를 두 개 이상 선택하세요.</string>
+    <string name="error_generic_pdf_processing">PDF 처리 중 문제가 발생했습니다.</string>
+    <string name="message_pdf_saved">%1$s이(가) Documents/MergePDF에 저장됨</string>
+</resources>

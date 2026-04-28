@@ -1,0 +1,23 @@
+﻿<resources>
+    <string name="app_name">MergePDF</string>
+    <string name="home_select_pdf_title">PDF select karein</string>
+    <string name="home_select_pdf_description">Do ya adhik PDF documents select karke unhe ek file me merge karne ke liye yahan tap karein.</string>
+    <string name="screen_merge_title">PDF merge karein</string>
+    <string name="merge_selected_counter">%1$d me se %2$d PDF merge honge</string>
+    <string name="add_pdf_button">PDF jodein</string>
+    <string name="remove_pdf_label">Remove</string>
+    <string name="merge_pdf_button">PDF MERGE KAREIN</string>
+    <string name="content_description_back">Back</string>
+    <string name="content_description_home">Home</string>
+    <string name="pdf_pages_count">Pages: %1$d</string>
+    <string name="share_pdf_chooser_title">Send PDF</string>
+    <string name="view_pdf_chooser_title">View PDF</string>
+    <string name="screen_results_title">PDF created</string>
+    <string name="no_pdfs_created">Koi PDF created nahi hua</string>
+    <string name="output_file_details">%1$d KB | %2$d Page(s)</string>
+    <string name="share_button">Share</string>
+    <string name="view_button">View</string>
+    <string name="error_invalid_merge_selection">Merge karne ke liye kam se kam do PDF select karein.</string>
+    <string name="error_generic_pdf_processing">PDF process karte waqt kuch galat hua.</string>
+    <string name="message_pdf_saved">%1$s Documents/MergePDF me saved</string>
+</resources>

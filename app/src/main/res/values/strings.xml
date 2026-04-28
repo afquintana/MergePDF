@@ -1,0 +1,23 @@
+﻿<resources>
+    <string name="app_name">MergePDF</string>
+    <string name="home_select_pdf_title">Select PDFs</string>
+    <string name="home_select_pdf_description">Tap here to select two or more PDF documents and merge them into one file.</string>
+    <string name="screen_merge_title">Merge PDFs</string>
+    <string name="merge_selected_counter">%1$d of %2$d PDFs will be merged</string>
+    <string name="add_pdf_button">Add PDF</string>
+    <string name="remove_pdf_label">Remove</string>
+    <string name="merge_pdf_button">MERGE PDF</string>
+    <string name="content_description_back">Back</string>
+    <string name="content_description_home">Home</string>
+    <string name="pdf_pages_count">Pages: %1$d</string>
+    <string name="share_pdf_chooser_title">Send PDF</string>
+    <string name="view_pdf_chooser_title">View PDF</string>
+    <string name="screen_results_title">PDF created</string>
+    <string name="no_pdfs_created">No PDF created</string>
+    <string name="output_file_details">%1$d KB | %2$d Page(s)</string>
+    <string name="share_button">Share</string>
+    <string name="view_button">View</string>
+    <string name="error_invalid_merge_selection">Select at least two PDFs to merge.</string>
+    <string name="error_generic_pdf_processing">Something went wrong while processing the PDF.</string>
+    <string name="message_pdf_saved">%1$s saved in Documents/MergePDF</string>
+</resources>

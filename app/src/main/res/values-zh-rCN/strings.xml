@@ -1,0 +1,23 @@
+﻿<resources>
+    <string name="app_name">MergePDF</string>
+    <string name="home_select_pdf_title">选择 PDF</string>
+    <string name="home_select_pdf_description">点按此处选择两个或更多 PDF 文档，并将它们合并为一个文件。</string>
+    <string name="screen_merge_title">合并 PDF</string>
+    <string name="merge_selected_counter">将合并 %2$d 个 PDF 中的 %1$d 个</string>
+    <string name="add_pdf_button">添加 PDF</string>
+    <string name="remove_pdf_label">移除</string>
+    <string name="merge_pdf_button">合并 PDF</string>
+    <string name="content_description_back">Back</string>
+    <string name="content_description_home">Home</string>
+    <string name="pdf_pages_count">Pages: %1$d</string>
+    <string name="share_pdf_chooser_title">Send PDF</string>
+    <string name="view_pdf_chooser_title">View PDF</string>
+    <string name="screen_results_title">PDF 已创建</string>
+    <string name="no_pdfs_created">未创建 PDF</string>
+    <string name="output_file_details">%1$d KB | %2$d Page(s)</string>
+    <string name="share_button">Share</string>
+    <string name="view_button">View</string>
+    <string name="error_invalid_merge_selection">请选择至少两个 PDF 进行合并。</string>
+    <string name="error_generic_pdf_processing">处理 PDF 时出现问题。</string>
+    <string name="message_pdf_saved">%1$s 已保存到 Documents/MergePDF</string>
+</resources>
