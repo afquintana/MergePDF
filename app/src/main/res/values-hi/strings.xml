@@ -1,5 +1,5 @@
 ﻿<resources>
-    <string name="app_name">Unir PDF</string>
+    <string name="app_name">PDF मर्ज करें</string>
     <string name="home_select_pdf_title">PDF chunein</string>
     <string name="home_select_pdf_description">Do ya adhik PDF documents chun kar unhe ek file me merge karne ke liye yahan tap karein.</string>
     <string name="screen_merge_title">PDF merge karein</string>
@@ -12,6 +12,10 @@
     <string name="content_description_back">Peeche</string>
     <string name="content_description_home">Home</string>
     <string name="pdf_pages_count">Pages: %1$d</string>
+    <string name="page_preview_label">%1$d. %2$s</string>
+    <string name="default_pdf_name">document.pdf</string>
+    <string name="output_folder_name">UnirPDF</string>
+    <string name="output_file_name">UnirPDF_%1$d.pdf</string>
     <string name="share_pdf_chooser_title">PDF bhejein</string>
     <string name="view_pdf_chooser_title">PDF dekhein</string>
     <string name="screen_results_title">PDF ban gaya</string>
@@ -23,6 +27,11 @@
     <string name="error_invalid_merge_selection">Merge karne ke liye kam se kam do PDF chunein.</string>
     <string name="error_empty_merge_output">Hatane ke liye kam pages chunein. Merged PDF me kam se kam ek page hona chahiye.</string>
     <string name="error_generic_pdf_processing">PDF process karte waqt kuch galat hua.</string>
+    <string name="error_unable_open_pdf">PDF open nahi ho saka.</string>
+    <string name="error_unable_open_output_folder">Selected folder open nahi ho saka.</string>
+    <string name="error_unable_read_pdf">%1$s read nahi ho saka.</string>
+    <string name="error_unable_create_output_file">Output file create nahi ho saki.</string>
+    <string name="error_unable_save_output_file">File save nahi ho saki.</string>
     <string name="message_pdf_saved">%1$s Documents/UnirPDF me saved</string>
 </resources>
 

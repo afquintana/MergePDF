@@ -1,5 +1,5 @@
 ﻿<resources>
-    <string name="app_name">Unir PDF</string>
+    <string name="app_name">Merge PDF</string>
     <string name="home_select_pdf_title">Select PDFs</string>
     <string name="home_select_pdf_description">Tap here to select two or more PDF documents and merge them into one file.</string>
     <string name="screen_merge_title">Merge PDFs</string>
@@ -12,6 +12,10 @@
     <string name="content_description_back">Back</string>
     <string name="content_description_home">Home</string>
     <string name="pdf_pages_count">Pages: %1$d</string>
+    <string name="page_preview_label">%1$d. %2$s</string>
+    <string name="default_pdf_name">document.pdf</string>
+    <string name="output_folder_name">UnirPDF</string>
+    <string name="output_file_name">UnirPDF_%1$d.pdf</string>
     <string name="share_pdf_chooser_title">Send PDF</string>
     <string name="view_pdf_chooser_title">View PDF</string>
     <string name="screen_results_title">PDF created</string>
@@ -23,6 +27,11 @@
     <string name="error_invalid_merge_selection">Select at least two PDFs to merge.</string>
     <string name="error_empty_merge_output">Select fewer pages to remove. The merged PDF needs at least one page.</string>
     <string name="error_generic_pdf_processing">Something went wrong while processing the PDF.</string>
+    <string name="error_unable_open_pdf">Unable to open the PDF.</string>
+    <string name="error_unable_open_output_folder">Unable to open the selected folder.</string>
+    <string name="error_unable_read_pdf">Unable to read %1$s.</string>
+    <string name="error_unable_create_output_file">Unable to create the output file.</string>
+    <string name="error_unable_save_output_file">Unable to save the file.</string>
     <string name="message_pdf_saved">%1$s saved in Documents/UnirPDF</string>
 </resources>
 

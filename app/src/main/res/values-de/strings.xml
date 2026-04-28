@@ -1,5 +1,5 @@
 ﻿<resources>
-    <string name="app_name">Unir PDF</string>
+    <string name="app_name">PDF zusammenfügen</string>
     <string name="home_select_pdf_title">PDFs auswahlen</string>
     <string name="home_select_pdf_description">Tippe hier, um zwei oder mehr PDF-Dokumente auszuwahlen und zu einer Datei zusammenzufugen.</string>
     <string name="screen_merge_title">PDFs zusammenfugen</string>
@@ -12,6 +12,10 @@
     <string name="content_description_back">Zuruck</string>
     <string name="content_description_home">Start</string>
     <string name="pdf_pages_count">Seiten: %1$d</string>
+    <string name="page_preview_label">%1$d. %2$s</string>
+    <string name="default_pdf_name">dokument.pdf</string>
+    <string name="output_folder_name">UnirPDF</string>
+    <string name="output_file_name">UnirPDF_%1$d.pdf</string>
     <string name="share_pdf_chooser_title">PDF senden</string>
     <string name="view_pdf_chooser_title">PDF anzeigen</string>
     <string name="screen_results_title">PDF erstellt</string>
@@ -23,6 +27,11 @@
     <string name="error_invalid_merge_selection">Wahle mindestens zwei PDFs zum Zusammenfugen aus.</string>
     <string name="error_empty_merge_output">Wahle weniger Seiten zum Entfernen aus. Das zusammengefugte PDF braucht mindestens eine Seite.</string>
     <string name="error_generic_pdf_processing">Beim Verarbeiten der PDF ist ein Fehler aufgetreten.</string>
+    <string name="error_unable_open_pdf">Die PDF konnte nicht geoffnet werden.</string>
+    <string name="error_unable_open_output_folder">Der ausgewahlte Ordner konnte nicht geoffnet werden.</string>
+    <string name="error_unable_read_pdf">%1$s konnte nicht gelesen werden.</string>
+    <string name="error_unable_create_output_file">Die Ausgabedatei konnte nicht erstellt werden.</string>
+    <string name="error_unable_save_output_file">Die Datei konnte nicht gespeichert werden.</string>
     <string name="message_pdf_saved">%1$s in Documents/UnirPDF gespeichert</string>
 </resources>
 

@@ -308,7 +308,7 @@ private fun PdfPageTile(
             )
         }
         Text(
-            text = "${page.pageNumber}. ${pdf.name}",
+            text = stringResource(R.string.page_preview_label, page.pageNumber, pdf.name),
             modifier = Modifier.padding(top = 6.dp),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,

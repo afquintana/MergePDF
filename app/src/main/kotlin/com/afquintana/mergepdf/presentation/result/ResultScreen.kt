@@ -127,7 +127,7 @@ fun ResultScreen(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 8.dp, bottom = 10.dp),
+                    .padding(top = 8.dp),
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
             ) {
                 Button(

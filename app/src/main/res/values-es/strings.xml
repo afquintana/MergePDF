@@ -12,6 +12,10 @@
     <string name="content_description_back">Atras</string>
     <string name="content_description_home">Inicio</string>
     <string name="pdf_pages_count">Paginas: %1$d</string>
+    <string name="page_preview_label">%1$d. %2$s</string>
+    <string name="default_pdf_name">documento.pdf</string>
+    <string name="output_folder_name">UnirPDF</string>
+    <string name="output_file_name">UnirPDF_%1$d.pdf</string>
     <string name="share_pdf_chooser_title">Enviar PDF</string>
     <string name="view_pdf_chooser_title">Ver PDF</string>
     <string name="screen_results_title">PDF creado</string>
@@ -23,6 +27,11 @@
     <string name="error_invalid_merge_selection">Selecciona al menos dos PDFs para unir.</string>
     <string name="error_empty_merge_output">Selecciona menos paginas para eliminar. El PDF unido necesita al menos una pagina.</string>
     <string name="error_generic_pdf_processing">Algo salio mal al procesar el PDF.</string>
+    <string name="error_unable_open_pdf">No se pudo abrir el PDF.</string>
+    <string name="error_unable_open_output_folder">No se pudo abrir la carpeta seleccionada.</string>
+    <string name="error_unable_read_pdf">No se pudo leer %1$s.</string>
+    <string name="error_unable_create_output_file">No se pudo crear el archivo de salida.</string>
+    <string name="error_unable_save_output_file">No se pudo guardar el archivo.</string>
     <string name="message_pdf_saved">%1$s guardado en Documents/UnirPDF</string>
 </resources>
 

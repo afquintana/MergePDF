@@ -1,5 +1,5 @@
 ﻿<resources>
-    <string name="app_name">Unir PDF</string>
+    <string name="app_name">Juntar PDF</string>
     <string name="home_select_pdf_title">Selecionar PDFs</string>
     <string name="home_select_pdf_description">Toque aqui para selecionar dois ou mais documentos PDF e juntar tudo em um arquivo.</string>
     <string name="screen_merge_title">Juntar PDFs</string>
@@ -12,6 +12,10 @@
     <string name="content_description_back">Voltar</string>
     <string name="content_description_home">Inicio</string>
     <string name="pdf_pages_count">Paginas: %1$d</string>
+    <string name="page_preview_label">%1$d. %2$s</string>
+    <string name="default_pdf_name">documento.pdf</string>
+    <string name="output_folder_name">UnirPDF</string>
+    <string name="output_file_name">UnirPDF_%1$d.pdf</string>
     <string name="share_pdf_chooser_title">Enviar PDF</string>
     <string name="view_pdf_chooser_title">Ver PDF</string>
     <string name="screen_results_title">PDF criado</string>
@@ -23,6 +27,11 @@
     <string name="error_invalid_merge_selection">Selecione pelo menos dois PDFs para juntar.</string>
     <string name="error_empty_merge_output">Selecione menos paginas para remover. O PDF unido precisa ter pelo menos uma pagina.</string>
     <string name="error_generic_pdf_processing">Algo deu errado ao processar o PDF.</string>
+    <string name="error_unable_open_pdf">Nao foi possivel abrir o PDF.</string>
+    <string name="error_unable_open_output_folder">Nao foi possivel abrir a pasta selecionada.</string>
+    <string name="error_unable_read_pdf">Nao foi possivel ler %1$s.</string>
+    <string name="error_unable_create_output_file">Nao foi possivel criar o arquivo de saida.</string>
+    <string name="error_unable_save_output_file">Nao foi possivel salvar o arquivo.</string>
     <string name="message_pdf_saved">%1$s salvo em Documents/UnirPDF</string>
 </resources>
 

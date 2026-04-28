@@ -1,5 +1,5 @@
 ﻿<resources>
-    <string name="app_name">Unir PDF</string>
+    <string name="app_name">Fusionner PDF</string>
     <string name="home_select_pdf_title">Selectionner des PDF</string>
     <string name="home_select_pdf_description">Touchez ici pour selectionner au moins deux documents PDF et les fusionner en un seul fichier.</string>
     <string name="screen_merge_title">Fusionner des PDF</string>
@@ -12,6 +12,10 @@
     <string name="content_description_back">Retour</string>
     <string name="content_description_home">Accueil</string>
     <string name="pdf_pages_count">Pages : %1$d</string>
+    <string name="page_preview_label">%1$d. %2$s</string>
+    <string name="default_pdf_name">document.pdf</string>
+    <string name="output_folder_name">UnirPDF</string>
+    <string name="output_file_name">UnirPDF_%1$d.pdf</string>
     <string name="share_pdf_chooser_title">Envoyer le PDF</string>
     <string name="view_pdf_chooser_title">Voir le PDF</string>
     <string name="screen_results_title">PDF cree</string>
@@ -23,6 +27,11 @@
     <string name="error_invalid_merge_selection">Selectionnez au moins deux PDF a fusionner.</string>
     <string name="error_empty_merge_output">Selectionnez moins de pages a supprimer. Le PDF fusionne doit contenir au moins une page.</string>
     <string name="error_generic_pdf_processing">Une erreur est survenue pendant le traitement du PDF.</string>
+    <string name="error_unable_open_pdf">Impossible d ouvrir le PDF.</string>
+    <string name="error_unable_open_output_folder">Impossible d ouvrir le dossier selectionne.</string>
+    <string name="error_unable_read_pdf">Impossible de lire %1$s.</string>
+    <string name="error_unable_create_output_file">Impossible de creer le fichier de sortie.</string>
+    <string name="error_unable_save_output_file">Impossible d enregistrer le fichier.</string>
     <string name="message_pdf_saved">%1$s enregistre dans Documents/UnirPDF</string>
 </resources>
 

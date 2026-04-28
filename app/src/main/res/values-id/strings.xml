@@ -1,5 +1,5 @@
 ﻿<resources>
-    <string name="app_name">Unir PDF</string>
+    <string name="app_name">Gabungkan PDF</string>
     <string name="home_select_pdf_title">Pilih PDF</string>
     <string name="home_select_pdf_description">Ketuk di sini untuk memilih dua atau lebih dokumen PDF dan menggabungkannya menjadi satu file.</string>
     <string name="screen_merge_title">Gabungkan PDF</string>
@@ -12,6 +12,10 @@
     <string name="content_description_back">Kembali</string>
     <string name="content_description_home">Beranda</string>
     <string name="pdf_pages_count">Halaman: %1$d</string>
+    <string name="page_preview_label">%1$d. %2$s</string>
+    <string name="default_pdf_name">dokumen.pdf</string>
+    <string name="output_folder_name">UnirPDF</string>
+    <string name="output_file_name">UnirPDF_%1$d.pdf</string>
     <string name="share_pdf_chooser_title">Kirim PDF</string>
     <string name="view_pdf_chooser_title">Lihat PDF</string>
     <string name="screen_results_title">PDF dibuat</string>
@@ -23,6 +27,11 @@
     <string name="error_invalid_merge_selection">Pilih minimal dua PDF untuk digabungkan.</string>
     <string name="error_empty_merge_output">Pilih lebih sedikit halaman untuk dihapus. PDF gabungan harus memiliki minimal satu halaman.</string>
     <string name="error_generic_pdf_processing">Terjadi kesalahan saat memproses PDF.</string>
+    <string name="error_unable_open_pdf">PDF tidak dapat dibuka.</string>
+    <string name="error_unable_open_output_folder">Folder yang dipilih tidak dapat dibuka.</string>
+    <string name="error_unable_read_pdf">%1$s tidak dapat dibaca.</string>
+    <string name="error_unable_create_output_file">File keluaran tidak dapat dibuat.</string>
+    <string name="error_unable_save_output_file">File tidak dapat disimpan.</string>
     <string name="message_pdf_saved">%1$s disimpan di Documents/UnirPDF</string>
 </resources>
 
