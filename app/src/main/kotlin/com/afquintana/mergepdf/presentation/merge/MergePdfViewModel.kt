@@ -11,6 +11,7 @@ import com.afquintana.mergepdf.domain.model.MergeOutput
 import com.afquintana.mergepdf.domain.model.SelectedPdf
 import com.afquintana.mergepdf.domain.usecase.MergePdfsUseCase
 import com.afquintana.mergepdf.domain.usecase.ReadPdfUseCase
+import com.afquintana.mergepdf.domain.usecase.RenderPdfPagesUseCase
 import com.afquintana.mergepdf.domain.usecase.SavePdfUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -22,6 +23,7 @@ import kotlinx.coroutines.launch
 @HiltViewModel
 class MergePdfViewModel @Inject constructor(
     private val readPdf: ReadPdfUseCase,
+    private val renderPdfPages: RenderPdfPagesUseCase,
     private val mergePdfs: MergePdfsUseCase,
     private val savePdf: SavePdfUseCase,
     private val analytics: AppAnalytics,
@@ -33,6 +35,7 @@ class MergePdfViewModel @Inject constructor(
     val uiState: StateFlow<MergeUiState> = _uiState
 
     private var pendingMerge: List<SelectedPdf> = emptyList()
+    private var pendingExcludedPages: Map<String, Set<Int>> = emptyMap()
 
     fun onPdfsPicked(uris: List<Uri>) {
         if (uris.isEmpty()) return
@@ -43,11 +46,12 @@ class MergePdfViewModel @Inject constructor(
                 val newPdfs = uris
                     .filterNot { it.toString() in existingIds }
                     .map { uri -> readPdf(uri) }
+                val selectedPdfs = preparePagePreviews(_uiState.value.selectedPdfs + newPdfs)
                 analytics.logEvent("pdfs_selected", mapOf("files" to newPdfs.size.toString()))
-                _uiState.update { state ->
-                    state.copy(
+                _uiState.update {
+                    it.copy(
                         screen = MergeScreen.Review,
-                        selectedPdfs = state.selectedPdfs + newPdfs,
+                        selectedPdfs = selectedPdfs,
                         isBusy = false,
                     )
                 }
@@ -63,28 +67,62 @@ class MergePdfViewModel @Inject constructor(
         _uiState.update { it.copy(screen = MergeScreen.Review) }
     }
 
-    fun toggleRemoval(pdfId: String) {
+    fun removePdf(pdfId: String) {
         _uiState.update { state ->
             state.copy(
-                selectedPdfs = state.selectedPdfs.map { pdf ->
-                    if (pdf.id == pdfId) {
-                        pdf.copy(markedForRemoval = !pdf.markedForRemoval)
-                    } else {
-                        pdf
-                    }
-                },
+                selectedPdfs = state.selectedPdfs.filterNot { it.id == pdfId },
+                selectedPageIds = state.selectedPageIds.filterNot {
+                    it.substringBeforeLast(PAGE_ID_SEPARATOR) == pdfId
+                }.toSet(),
             )
         }
     }
 
+    fun togglePageSelection(pdfId: String, pageNumber: Int) {
+        val pageId = pageId(pdfId, pageNumber)
+        _uiState.update { state ->
+            val selectedPages = if (pageId in state.selectedPageIds) {
+                state.selectedPageIds - pageId
+            } else {
+                state.selectedPageIds + pageId
+            }
+            state.copy(selectedPageIds = selectedPages)
+        }
+    }
+
+    fun setRemoveSelectedPages(remove: Boolean) {
+        _uiState.update { it.copy(removeSelectedPages = remove) }
+    }
+
     fun requestOutputFolder() {
-        val activePdfs = _uiState.value.selectedPdfs.filterNot { it.markedForRemoval }
-        if (activePdfs.size < 2) {
+        val state = _uiState.value
+        val selectedPdfs = state.selectedPdfs
+        if (selectedPdfs.size < 2) {
             _uiState.update { it.copy(error = strings.get(R.string.error_invalid_merge_selection)) }
             return
         }
+        val excludedPages = if (state.removeSelectedPages) {
+            state.selectedPageIds
+                .mapNotNull { selectedPageId ->
+                    val pdfId = selectedPageId.substringBeforeLast(PAGE_ID_SEPARATOR)
+                    val pageNumber = selectedPageId.substringAfterLast(PAGE_ID_SEPARATOR).toIntOrNull()
+                    pageNumber?.let { pdfId to it }
+                }
+                .groupBy({ it.first }, { it.second })
+                .mapValues { (_, pageNumbers) -> pageNumbers.toSet() }
+        } else {
+            emptyMap()
+        }
+        val remainingPages = selectedPdfs.sumOf { pdf ->
+            pdf.pageCount - excludedPages[pdf.id].orEmpty().size
+        }
+        if (remainingPages <= 0) {
+            _uiState.update { it.copy(error = strings.get(R.string.error_empty_merge_output)) }
+            return
+        }
 
-        pendingMerge = activePdfs
+        pendingMerge = selectedPdfs
+        pendingExcludedPages = excludedPages
         _uiState.update {
             it.copy(
                 outputFolderPickerRequest = it.outputFolderPickerRequest + 1,
@@ -99,15 +137,18 @@ class MergePdfViewModel @Inject constructor(
         if (selectedPdfs.isEmpty()) return
         if (folderUri == null) {
             pendingMerge = emptyList()
+            pendingExcludedPages = emptyMap()
             return
         }
 
         outputFolderStore.saveLastFolder(folderUri)
         pendingMerge = emptyList()
+        val excludedPages = pendingExcludedPages
+        pendingExcludedPages = emptyMap()
         viewModelScope.launch {
             runCatching {
                 _uiState.update { it.copy(isBusy = true, error = null, message = null) }
-                val output = mergePdfs(selectedPdfs, folderUri)
+                val output = mergePdfs(selectedPdfs, excludedPages, folderUri)
                 analytics.logEvent(
                     "pdfs_merged",
                     mapOf(
@@ -155,11 +196,32 @@ class MergePdfViewModel @Inject constructor(
             )
         }
     }
+
+    private suspend fun preparePagePreviews(pdfs: List<SelectedPdf>): List<SelectedPdf> {
+        val totalPages = pdfs.sumOf { it.pageCount }
+        return if (totalPages > MAX_PREVIEW_PAGES) {
+            pdfs.map { pdf -> pdf.copy(pages = pdf.pages.take(1)) }
+        } else {
+            pdfs.map { pdf ->
+                if (pdf.pages.size >= pdf.pageCount) {
+                    pdf
+                } else {
+                    pdf.copy(pages = renderPdfPages(pdf))
+                }
+            }
+        }
+    }
+
+    private companion object {
+        const val MAX_PREVIEW_PAGES = 50
+    }
 }
 
 data class MergeUiState(
     val screen: MergeScreen = MergeScreen.Home,
     val selectedPdfs: List<SelectedPdf> = emptyList(),
+    val selectedPageIds: Set<String> = emptySet(),
+    val removeSelectedPages: Boolean = false,
     val output: MergeOutput? = null,
     val outputFolderPickerRequest: Long = 0L,
     val initialOutputFolder: Uri? = null,
@@ -173,3 +235,7 @@ enum class MergeScreen {
     Review,
     Result,
 }
+
+private const val PAGE_ID_SEPARATOR = "#"
+
+fun pageId(pdfId: String, pageNumber: Int): String = "$pdfId$PAGE_ID_SEPARATOR$pageNumber"

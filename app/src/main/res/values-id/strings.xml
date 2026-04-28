@@ -1,23 +1,28 @@
 ﻿<resources>
-    <string name="app_name">MergePDF</string>
+    <string name="app_name">Unir PDF</string>
     <string name="home_select_pdf_title">Pilih PDF</string>
     <string name="home_select_pdf_description">Ketuk di sini untuk memilih dua atau lebih dokumen PDF dan menggabungkannya menjadi satu file.</string>
     <string name="screen_merge_title">Gabungkan PDF</string>
     <string name="merge_selected_counter">%1$d dari %2$d PDF akan digabung</string>
     <string name="add_pdf_button">Tambah PDF</string>
     <string name="remove_pdf_label">Hapus</string>
+    <string name="remove_selected_pages_title">Hapus halaman terpilih</string>
+    <string name="remove_selected_pages_description">%1$d halaman terpilih akan dilewati jika aktif.</string>
     <string name="merge_pdf_button">GABUNGKAN PDF</string>
-    <string name="content_description_back">Back</string>
-    <string name="content_description_home">Home</string>
-    <string name="pdf_pages_count">Pages: %1$d</string>
-    <string name="share_pdf_chooser_title">Send PDF</string>
-    <string name="view_pdf_chooser_title">View PDF</string>
+    <string name="content_description_back">Kembali</string>
+    <string name="content_description_home">Beranda</string>
+    <string name="pdf_pages_count">Halaman: %1$d</string>
+    <string name="share_pdf_chooser_title">Kirim PDF</string>
+    <string name="view_pdf_chooser_title">Lihat PDF</string>
     <string name="screen_results_title">PDF dibuat</string>
     <string name="no_pdfs_created">Tidak ada PDF dibuat</string>
-    <string name="output_file_details">%1$d KB | %2$d Page(s)</string>
-    <string name="share_button">Share</string>
-    <string name="view_button">View</string>
+    <string name="output_file_details">%1$d KB | %2$d halaman</string>
+    <string name="remaining_pages_message">Ada %1$d halaman lagi</string>
+    <string name="share_button">Bagikan</string>
+    <string name="view_button">Lihat</string>
     <string name="error_invalid_merge_selection">Pilih minimal dua PDF untuk digabungkan.</string>
+    <string name="error_empty_merge_output">Pilih lebih sedikit halaman untuk dihapus. PDF gabungan harus memiliki minimal satu halaman.</string>
     <string name="error_generic_pdf_processing">Terjadi kesalahan saat memproses PDF.</string>
-    <string name="message_pdf_saved">%1$s disimpan di Documents/MergePDF</string>
+    <string name="message_pdf_saved">%1$s disimpan di Documents/UnirPDF</string>
 </resources>
+

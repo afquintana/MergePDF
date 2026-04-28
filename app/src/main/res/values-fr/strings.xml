@@ -1,23 +1,28 @@
 ﻿<resources>
-    <string name="app_name">MergePDF</string>
+    <string name="app_name">Unir PDF</string>
     <string name="home_select_pdf_title">Selectionner des PDF</string>
     <string name="home_select_pdf_description">Touchez ici pour selectionner au moins deux documents PDF et les fusionner en un seul fichier.</string>
     <string name="screen_merge_title">Fusionner des PDF</string>
     <string name="merge_selected_counter">%1$d PDF sur %2$d seront fusionnes</string>
     <string name="add_pdf_button">Ajouter un PDF</string>
     <string name="remove_pdf_label">Supprimer</string>
+    <string name="remove_selected_pages_title">Supprimer les pages selectionnees</string>
+    <string name="remove_selected_pages_description">%1$d page(s) selectionnee(s) seront ignorees si active.</string>
     <string name="merge_pdf_button">FUSIONNER PDF</string>
-    <string name="content_description_back">Back</string>
-    <string name="content_description_home">Home</string>
-    <string name="pdf_pages_count">Pages: %1$d</string>
-    <string name="share_pdf_chooser_title">Send PDF</string>
-    <string name="view_pdf_chooser_title">View PDF</string>
+    <string name="content_description_back">Retour</string>
+    <string name="content_description_home">Accueil</string>
+    <string name="pdf_pages_count">Pages : %1$d</string>
+    <string name="share_pdf_chooser_title">Envoyer le PDF</string>
+    <string name="view_pdf_chooser_title">Voir le PDF</string>
     <string name="screen_results_title">PDF cree</string>
     <string name="no_pdfs_created">Aucun PDF cree</string>
-    <string name="output_file_details">%1$d KB | %2$d Page(s)</string>
-    <string name="share_button">Share</string>
-    <string name="view_button">View</string>
+    <string name="output_file_details">%1$d KB | %2$d page(s)</string>
+    <string name="remaining_pages_message">Il reste %1$d page(s) de plus</string>
+    <string name="share_button">Partager</string>
+    <string name="view_button">Voir</string>
     <string name="error_invalid_merge_selection">Selectionnez au moins deux PDF a fusionner.</string>
+    <string name="error_empty_merge_output">Selectionnez moins de pages a supprimer. Le PDF fusionne doit contenir au moins une page.</string>
     <string name="error_generic_pdf_processing">Une erreur est survenue pendant le traitement du PDF.</string>
-    <string name="message_pdf_saved">%1$s enregistre dans Documents/MergePDF</string>
+    <string name="message_pdf_saved">%1$s enregistre dans Documents/UnirPDF</string>
 </resources>
+

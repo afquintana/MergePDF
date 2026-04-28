@@ -1,5 +1,6 @@
 package com.afquintana.mergepdf.domain.model
 
+import android.graphics.Bitmap
 import android.net.Uri
 import java.io.File
 
@@ -8,7 +9,12 @@ data class SelectedPdf(
     val uri: Uri,
     val name: String,
     val pageCount: Int,
-    val markedForRemoval: Boolean = false,
+    val pages: List<PdfPagePreview>,
+)
+
+data class PdfPagePreview(
+    val pageNumber: Int,
+    val thumbnail: Bitmap,
 )
 
 data class MergeOutput(

@@ -119,7 +119,9 @@ private fun MergePdfApp(
             state = state,
             onBack = viewModel::goHome,
             onAddPdfs = pickPdfs,
-            onToggleRemoval = viewModel::toggleRemoval,
+            onRemovePdf = viewModel::removePdf,
+            onPageClick = viewModel::togglePageSelection,
+            onRemoveSelectedPagesChange = viewModel::setRemoveSelectedPages,
             onMerge = viewModel::requestOutputFolder,
         )
 

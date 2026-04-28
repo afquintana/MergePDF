@@ -12,13 +12,20 @@ class ReadPdfUseCase @Inject constructor(
     suspend operator fun invoke(uri: Uri) = repository.readPdf(uri)
 }
 
+class RenderPdfPagesUseCase @Inject constructor(
+    private val repository: PdfRepository,
+) {
+    suspend operator fun invoke(pdf: SelectedPdf) = repository.renderPages(pdf)
+}
+
 class MergePdfsUseCase @Inject constructor(
     private val repository: PdfRepository,
 ) {
     suspend operator fun invoke(
         pdfs: List<SelectedPdf>,
+        excludedPages: Map<String, Set<Int>>,
         outputFolder: Uri,
-    ): MergeOutput = repository.merge(pdfs, outputFolder)
+    ): MergeOutput = repository.merge(pdfs, excludedPages, outputFolder)
 }
 
 class SavePdfUseCase @Inject constructor(
