@@ -27,6 +27,10 @@
         android:required="false" />
 
     <uses-feature
+        android:name="android.hardware.faketouch"
+        android:required="false" />
+
+    <uses-feature
         android:name="android.software.xr.api.spatial"
         android:required="false" />
 
@@ -44,6 +48,10 @@
             android:name=".MainActivity"
             android:exported="true"
             android:resizeableActivity="true">
+            <property
+                android:name="android.window.PROPERTY_XR_ACTIVITY_START_MODE"
+                android:value="XR_ACTIVITY_START_MODE_HOME_SPACE" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
